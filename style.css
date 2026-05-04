@@ -2,11 +2,13 @@
     --bg-color: #fafafa;
     --text-primary: #334155;
     --text-secondary: #64748b;
-    --accent-primary: #38bdf8; /* sky blue */
-    --accent-secondary: #34d399; /* mint green */
+    --accent-primary: #38bdf8;
+    /* sky blue */
+    --accent-secondary: #34d399;
+    /* mint green */
     --card-bg: rgba(255, 255, 255, 0.7);
     --card-border: rgba(0, 0, 0, 0.05);
-    --font-main: 'Outfit', sans-serif;
+    --font-main: 'Crimson Pro', sans-serif;
 }
 
 * {
@@ -62,8 +64,13 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
 }
 
 /* Layout Container */
@@ -148,7 +155,7 @@ body {
 .card:hover {
     transform: translateY(-10px) scale(1.02);
     border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .card:hover::before {
@@ -216,13 +223,27 @@ body {
 
 /* Animations */
 @keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
@@ -230,9 +251,11 @@ body {
     .container {
         padding: 2rem 1.5rem;
     }
+
     .hero {
         margin-bottom: 3rem;
     }
+
     .blob {
         filter: blur(80px);
     }
