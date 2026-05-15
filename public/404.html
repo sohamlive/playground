@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>play.sidelower.in</title>
+    <script>
+      // Redirect GitHub Pages 404s into the SPA
+      // Technique: encode the path as a query param, redirect to index
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1).join('/') +
+        '/?p=' + encodeURIComponent(l.pathname + l.search) +
+        (l.hash ? '&h=' + encodeURIComponent(l.hash.slice(1)) : '')
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

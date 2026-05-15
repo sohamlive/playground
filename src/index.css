@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-garamond: "EB Garamond", Georgia, serif;
+  --font-plex: "IBM Plex Sans", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-parchment-bg: #FAF7F2;
+  --color-parchment-surface: #F3EDE3;
+  --color-parchment-border: #DDD5C8;
+  --color-parchment-text: #2C2416;
+  --color-parchment-muted: #7A6E5F;
+  --color-parchment-accent: #8B5E3C;
+  --color-parchment-accent-light: #EDE0D4;
+  --color-orange: #e08a3c;
+}
+
+@layer base {
+  body {
+    @apply bg-parchment-bg text-parchment-text font-plex antialiased min-h-screen flex flex-col relative;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(139, 94, 60, 0.03) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, rgba(139, 94, 60, 0.02) 0, transparent 50%);
+  }
+}

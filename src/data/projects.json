@@ -1,0 +1,28 @@
+[
+  {
+    "id": "guesstimate-tracker",
+    "title": "Guesstimate Tracker",
+    "description": "A practice tracker for PM interview guesstimate questions. 100 questions across categories, with difficulty tagging and progress tracking.",
+    "image": "/src/assets/thumb01.jpg",
+    "tags": [
+      "pm-prep",
+      "tracker",
+      "productivity"
+    ],
+    "lastUpdated": "2025-05-01",
+    "slug": "guesstimate-tracker",
+    "status": "live"
+  },
+  {
+    "id": "placeholder-2",
+    "title": "Coming Soon",
+    "description": "Something new is being built here. Stay tuned for more experiments.",
+    "image": "/src/assets/thumb02.jpg",
+    "tags": [
+      "wip"
+    ],
+    "lastUpdated": "2025-05-15",
+    "slug": "#",
+    "status": "wip"
+  }
+]
