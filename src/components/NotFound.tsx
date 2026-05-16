@@ -4,12 +4,12 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-parchment-bg flex flex-col items-center justify-center px-8 relative overflow-hidden">
       {/* Ghost number */}
-      <span className="absolute font-garamond italic text-[260px] font-semibold text-parchment-border leading-none select-none tracking-[-0.05em] pointer-events-none">
+      <span className="absolute font-garamond italic text-[260px] font-semibold text-parchment-border leading-none select-none tracking-tighter pointer-events-none">
         404
       </span>
 
       {/* Content */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -23,21 +23,21 @@ export default function NotFound() {
         </h1>
         <p className="font-plex font-light text-parchment-muted text-[15px] leading-relaxed max-w-sm mb-8">
           The page you're looking for doesn't exist — or maybe it{' '}
-          <em className="font-garamond italic text-lg not-italic inline" style={{ fontStyle: 'italic' }}>
+          <em className="font-garamond text-lg not-italic inline" style={{ fontStyle: 'italic' }}>
             never quite shipped.
           </em>{' '}
           Either way, there's nothing here right now.
         </p>
         <div className="flex gap-4 flex-wrap justify-center">
-          <a 
-            href="/" 
+          <a
+            href="/"
             className="font-plex font-medium text-sm text-parchment-bg bg-parchment-accent px-6 py-3 rounded-md hover:scale-[1.02] hover:opacity-90 transition-all duration-150 shadow-sm"
           >
             ← Back to the playground
           </a>
-          <a 
-            href="https://sidelower.in" 
-            target="_blank" 
+          <a
+            href="https://sidelower.in"
+            target="_blank"
             rel="noopener noreferrer"
             className="font-plex text-sm text-parchment-muted border border-parchment-border px-6 py-3 rounded-md hover:border-parchment-accent hover:text-parchment-accent hover:scale-[1.02] transition-all duration-150"
           >

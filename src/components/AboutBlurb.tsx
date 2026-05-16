@@ -6,7 +6,7 @@ export default function AboutBlurb() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="max-w-4xl mx-auto px-6 mb-20 text-center"
+      className="max-w-4xl mx-auto px-6 mb-15 text-center"
     >
       {/* <div className="inline-block mb-4 px-3 py-1 bg-parchment-accent/5 rounded-full">
         <span className="font-mono text-[10px] text-parchment-accent uppercase tracking-[0.2em] font-medium">
