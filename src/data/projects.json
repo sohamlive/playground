@@ -2,14 +2,14 @@
   {
     "id": "guesstimate-tracker",
     "title": "Guesstimate Tracker",
-    "description": "A practice tracker for PM interview guesstimate questions. 100 questions across categories, with difficulty tagging and progress tracking.",
+    "description": "A practice tracker for interview guesstimate questions. 100 questions across categories, with difficulty tagging and progress tracking.",
     "image": "/assets/thumb01.jpg",
     "tags": [
       "pm-prep",
       "tracker",
       "productivity"
     ],
-    "lastUpdated": "2025-05-01",
+    "lastUpdated": "2026-05-26",
     "slug": "guesstimate-tracker",
     "status": "live"
   },
@@ -21,7 +21,7 @@
     "tags": [
       "wip"
     ],
-    "lastUpdated": "2025-05-15",
+    "lastUpdated": "2026-05-26",
     "slug": "#",
     "status": "wip"
   }
