@@ -14,14 +14,27 @@
     "status": "live"
   },
   {
-    "id": "placeholder-2",
-    "title": "Coming Soon",
-    "description": "Something new is being built here. Stay tuned for more experiments.",
+    "id": "homelab",
+    "title": "Homelab @ Jamshedpur",
+    "description": "Wanted to self-host things. Using a RPi4B to get started with Docker, Portainer, PiHole, and other services.",
     "image": "/assets/thumb02.jpg",
+    "tags": [
+      "homelab",
+      "self-host"
+    ],
+    "lastUpdated": "2026-08-16",
+    "slug": "homelab",
+    "status": "live"
+  },
+  {
+    "id": "placeholder",
+    "title": "Coming Soon",
+    "description": "Something new is cooking...",
+    "image": "/assets/thumb03.jpg",
     "tags": [
       "wip"
     ],
-    "lastUpdated": "2026-05-26",
+    "lastUpdated": "2026-08-16",
     "slug": "#",
     "status": "wip"
   }

@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="absolute -bottom-2 left-0 w-full h-1 bg-parchment-accent/20 rounded-full blur-[1px]" />
       </h1>
       <p className="font-plex font-light text-xl md:text-2xl text-parchment-accent tracking-wide opacity-90">
-        Where curiosity ships.
+        Since everyone is building now, I should too.
       </p>
     </section>
   );

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Lab @ Jamshedpur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header class="hero">
+      <p class="eyebrow">Home lab</p>
+      <h1>HomeLab @ Jamshedpur</h1>
+      <p class="lede">
+        Notes on the Raspberry Pi 4 I run at home.
+      </p>
+      <div class="hero-meta">
+        <span>v1 - July 2022 - May 2026</span>
+        <span>·</span>
+        <span>v2 - June 2026 - Present</span>
+      </div>
+    </header>
+
+    <figure>
+      <img class="shot" src="images/HomeLab_Network.png" alt="The HomeLab network">
+      <figcaption>Whole network diagram.</figcaption>
+    </figure>
+
+    <section class="block">
+      <h2>A Bit of History</h2>
+      <p>
+        I wanted a small always-on box that isn't a laptop, doesn't live in the
+        cloud, and doesn't cost me a monthly bill. Somewhere to block ads
+        network-wide, host a few personal tools, and poke at things without
+        worrying about breaking a "real" server. A Pi 4 turned out to be
+        more than enough.
+      </p>
+    </section>
+
+    <section class="block stack-section">
+      <h2>What's running on it</h2>
+      <div class="stack-list">
+
+        <div class="stack-item">
+          <h3>Homepage</h3>
+          <p>Network-wide ad and tracker blocking, sitting as the DNS for every device on the network.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Pi-hole</h3>
+          <p>Network-wide ad and tracker blocking, sitting as the DNS for every device on the network.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Portainer</h3>
+          <p>A dashboard over Docker — starting, stopping, and checking logs on containers without living in the
+            terminal.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Nginx Proxy Manager</h3>
+          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
+            number.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Uptime Kuma</h3>
+          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
+            number.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Dozzle</h3>
+          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
+            number.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Netdata</h3>
+          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
+            number.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>File Browser</h3>
+          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
+            number.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>CUPS Service</h3>
+          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
+            number.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Folioman</h3>
+          <p>A private mesh network back to the Pi, with subnet routing and split DNS so home services feel local from
+            anywhere.</p>
+        </div>
+
+        <div class="stack-item">
+          <h3>Tailscale</h3>
+          <p>A private mesh network back to the Pi, with subnet routing and split DNS so home services feel local from
+            anywhere.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <figure>
+      <img class="shot" src="images/Homelab_Homepage.jpeg" alt="Homepage screenshot">
+      <figcaption>Homepage dashboard.</figcaption>
+    </figure>
+
+    <section class="block">
+      <h2>What actually broke</h2>
+      <p>
+        Containers occasionally came up on the wrong ports after a reboot,
+        fighting each other for the same address. Fixed by pinning explicit
+        port bindings per service and giving each container a static entry
+        in the compose file instead of leaving it to chance. Small annoyance,
+        good excuse to actually understand how Docker networking works.
+      </p>
+    </section>
+
+    <section class="block closing">
+      <h2>What's next</h2>
+      <p>
+        Slowly adding more self-hosted tools as I need them, and treating the
+        whole thing as a low-stakes place to practice — the kind of practice
+        that's hard to get away with on anything that actually matters.
+      </p>
+      <p>
+        Find more details here - <a href="https://github.com/sohamlive/homelab" target="_blank"
+          rel="noopener noreferrer">Link</a>
+      </p>
+    </section>
+
+    <footer>
+      <p>Written &amp; hosted from the same Pi it describes.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

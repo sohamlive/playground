@@ -18,6 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <motion.a
       href={link}
+      target="_blank"
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ y: -4, transition: { duration: 0.15 } }}
