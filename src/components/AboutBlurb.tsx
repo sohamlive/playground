@@ -14,10 +14,10 @@ export default function AboutBlurb() {
         </span>
       </div> */}
       <p className="font-plex text-xl text-parchment-text leading-relaxed font-light">
-        This is where I put things I've built — trackers, tools, small experiments.
-        Some are useful. Some are just fun. All of them started as a
+        This is where I put things I've built — trackers, tools, small things.
+        All of them started becuase I was wanted to explore something and becuase
         <span className="font-garamond italic mx-1.5 text-parchment-accent decoration-parchment-accent/30 underline underline-offset-4 decoration-2">
-          question I wanted to answer.
+          building is fun.
         </span>
       </p>
       <div className="mt-10 flex items-center justify-center gap-4">
