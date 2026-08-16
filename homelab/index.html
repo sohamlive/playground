@@ -38,12 +38,38 @@
     <section class="block">
       <h2>A Bit of History</h2>
       <p>
-        I wanted a small always-on box that isn't a laptop, doesn't live in the
-        cloud, and doesn't cost me a monthly bill. Somewhere to block ads
-        network-wide, host a few personal tools, and poke at things without
-        worrying about breaking a "real" server. A Pi 4 turned out to be
-        more than enough.
+        I first came across the term Homelab through Reddit's <a href="https://www.reddit.com/r/homelab/"
+          target="_blank" rel="noopener noreferrer">r/homelab</a> subreddit sometime in 2020. I was still
+        in college back then didn't have the funds to get anything. RasperryPi was on my bucket list for
+        quite sometime and although back then it was quite cheap (Rs.4k) compared to the atrocious pricing
+        of the current times, I couldn't afford one.</p><br />
+
+      <p>My first job started a bit late in September 2020 due
+        to the pandemic and I had spent the first few months spending. On family and myself - as we all should
+        with our first job. The independence was thrilling.</p><br />
+
+      <p>By the time I actually wanted to buy a Pi in 2021, scalpers had made sure they weren't easy to get.
+        Fast forward to mid-2022, and I finally got one: Raspberry Pi 4 Model B, 4GB RAM. Felt like a steal
+        even then at ~5.5k, plus another 2k in peripherals. First service I ran on it was Pi-hole. I just
+        wanted to block ads and trackers across my devices.</p> <br />
+
+      <p>I slowly added Nginx Proxy Manager, Portainer, and wrote the setup scripts by own. Took me quite some
+        frustrating nights but self hosting services was genuinely awesome! Scrolling through r/homelab, I
+        dreamt of running multiple services, mini PCs, NAS, building my own little ecosystem. Back then it
+        felt like a distant dream.
       </p>
+    </section>
+
+    <section class="block">
+      <h2>Now</h2>
+      <p>Cutting to 2026, with the LLMs powering and improving a lot (at the same time making consumer devices
+        out of reach due to pricing and greed), I updated my setup. The hardware remains the same but I added
+        some new services which I describe below. This time, I used Claude to generate setup scripts, create
+        the schedulers. Much easier and less messy. Debugging also simplified.</p><br />
+
+      <p>Right now, all my services and devices are accessible using Tailscale's subnet routing so I can print,
+        access, and debug from anywhere. I needed this since while I am in Bangalore now, I wanted a way to
+        make better use of the server back in Jamshedpur.</p>
     </section>
 
     <section class="block stack-section">
@@ -52,66 +78,70 @@
 
         <div class="stack-item">
           <h3>Homepage</h3>
-          <p>Network-wide ad and tracker blocking, sitting as the DNS for every device on the network.</p>
+          <p>The homepage of the setup. Can access everything from here. All services have their links here. Each
+            service can be accessed using a unique subdomain.</p>
         </div>
 
         <div class="stack-item">
           <h3>Pi-hole</h3>
-          <p>Network-wide ad and tracker blocking, sitting as the DNS for every device on the network.</p>
+          <p>Network-wide ad and tracker blocking, as the DNS for every device on the network. Also, using this with
+            NPM to create and route the custom subdomains.
+          </p>
         </div>
 
         <div class="stack-item">
           <h3>Portainer</h3>
-          <p>A dashboard over Docker — starting, stopping, and checking logs on containers without living in the
-            terminal.</p>
+          <p>A GUI for Docker. Simple, easy to manage the containers and the images. Removed the hassles from updating.
+          </p>
         </div>
 
         <div class="stack-item">
           <h3>Nginx Proxy Manager</h3>
-          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
-            number.</p>
+          <p>Reverse proxy in front of everything, so each service gets its own subdomain (and making it easier to
+            remember)
+            instead of a port number.</p>
         </div>
 
         <div class="stack-item">
           <h3>Uptime Kuma</h3>
-          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
-            number.</p>
+          <p>Checking the uptime status of the services. Not used much since it is only me and my parents who use the
+            server but it is cool.</p>
         </div>
 
         <div class="stack-item">
           <h3>Dozzle</h3>
-          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
-            number.</p>
+          <p>For accessing logs of Docker. Much better than Portainer, much easier to get the one time passwords.</p>
         </div>
 
         <div class="stack-item">
           <h3>Netdata</h3>
-          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
-            number.</p>
+          <p>Lots of data collected. CPU, RAM, Temperature, Network. Everything. It is a lot.</p>
         </div>
 
         <div class="stack-item">
           <h3>File Browser</h3>
-          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
-            number.</p>
+          <p>Simple file browser to access the files on the server. Since my Pi is running headless, this is a life
+            saver.</p>
         </div>
 
         <div class="stack-item">
           <h3>CUPS Service</h3>
-          <p>Reverse proxy in front of everything, so each service gets its own clean subdomain instead of a port
-            number.</p>
+          <p>Remote printing service for my Epson L3110. Connected it and made the printer a network wide printer.
+            After Pi-Hole, the second best thing on my Homelab.
+          </p>
         </div>
 
         <div class="stack-item">
           <h3>Folioman</h3>
-          <p>A private mesh network back to the Pi, with subnet routing and split DNS so home services feel local from
-            anywhere.</p>
+          <p>Mutual Fund portfolio tracker. I gave up on apps and started doing direct investments from AMC sites
+            I missed the ease of tracking. This solved the problem albeit with a few gaps.
+          </p>
         </div>
 
         <div class="stack-item">
           <h3>Tailscale</h3>
-          <p>A private mesh network back to the Pi, with subnet routing and split DNS so home services feel local from
-            anywhere.</p>
+          <p>A private mesh network back to the Pi, with subnet routing and split DNS so home services can be
+            accessed securely from anywhere. My personal favourite.</p>
         </div>
 
       </div>
@@ -123,31 +153,37 @@
     </figure>
 
     <section class="block">
-      <h2>What actually broke</h2>
+      <h2>What's the Issue?</h2>
       <p>
-        Containers occasionally came up on the wrong ports after a reboot,
-        fighting each other for the same address. Fixed by pinning explicit
+        Docker port bindings!
+        Containers would occasionally come up on the wrong ports after a reboot,
+        fighting each other for the same port. Fixed by giving explicit
         port bindings per service and giving each container a static entry
-        in the compose file instead of leaving it to chance. Small annoyance,
-        good excuse to actually understand how Docker networking works.
+        in the compose file.
+      </p>
+      <p>
+        Find more details on the scripts and how the entire setup works here -
+        <a href="https://github.com/sohamlive/homelab" target="_blank" rel="noopener noreferrer">Link</a>
       </p>
     </section>
 
     <section class="block closing">
-      <h2>What's next</h2>
+      <h2>What's Next?</h2>
       <p>
-        Slowly adding more self-hosted tools as I need them, and treating the
-        whole thing as a low-stakes place to practice — the kind of practice
-        that's hard to get away with on anything that actually matters.
-      </p>
-      <p>
-        Find more details here - <a href="https://github.com/sohamlive/homelab" target="_blank"
-          rel="noopener noreferrer">Link</a>
-      </p>
+        Homelabbing is expensive and getting hardware is most of the time out of budget. But, slowly someday...
+        <br />
+      <ul>
+        <li><i>Upgrade.</i> Have a Mini PC with a better CPU, bigger RAM, and greater & faster SSD storage.</li>
+        <li><i>More Services.</i> Want to run Immich (photo storage) some day.</li>
+        <li><i>New Things.</i> Get a NAS running. Perhaps the most expensive of the lot.</li>
+        <li><i>Fun!</i> Homelab is supposed to be fun. Want to build things, tweak them, break them, and fix them
+          again.</li>
+      </ul>
+
     </section>
 
     <footer>
-      <p>Written &amp; hosted from the same Pi it describes.</p>
+      <p>Updated on 16th August, 2026.</p>
     </footer>
 
   </div>
