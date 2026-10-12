@@ -27,15 +27,16 @@
     "status": "live"
   },
   {
-    "id": "placeholder",
-    "title": "Coming Soon",
-    "description": "Something new is cooking...",
+    "id": "rider",
+    "title": "Rider",
+    "description": "A simple application to track my Activa's rides and expenses. Currently tracks fuel and rides, with future plans for other expenses.",
     "image": "/assets/thumb03.jpg",
     "tags": [
-      "wip"
+      "ride",
+      "expenses"
     ],
-    "lastUpdated": "2026-08-16",
-    "slug": "#",
-    "status": "wip"
+    "lastUpdated": "2026-10-12",
+    "slug": "rider",
+    "status": "live"
   }
 ]
