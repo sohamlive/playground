@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rider-pwa-v1';
+const CACHE_NAME = 'rider-pwa-v2';
 
 // Static assets to cache immediately on service worker install
 const PRECACHE_ASSETS = [
